@@ -6,7 +6,21 @@
 </head>
 <body>
     <script>
-        dsjfk
+        var arr=["a","b","a","b","a","c","d","a"];
+        var wuwuwu=function(arr,str,num){
+            var n=-1;
+            var count=0
+            for (;;){
+                n=arr.indexOf(str,n+1);
+                if (n===-1){
+                    break;
+                }
+                count++;
+            }
+            return num===count;
+        }
+        console.log(wuwuwu(arr,"a",4));
+
     </script>
 </body>
 </html>
