@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+*{margin:0; padding:0;}
+.box{width:500px; height:300px; margin:50px auto; overflow:hidden;}
+.box img{width:500px; height:300px; transition:transform 2s;}
+.box:hover img{transform:translateX(-50px); opacity:.5;}
+.box dl dt{transform:translate(50px,-200px); font-size:22px; font-weight:bold; color:#FFF; visibility:hidden; transition:transform 2s;}
+.box:hover dl dt{visibility:visible; transform:translate(50px,-220px);}
+.box dl dd{display:block; width:800px; height:300px; background:#FFF; transition:transform 2s;}
+.box:hover dl dd{transform:translateY(-260px) rotate(-30deg) ;}
+.box dl p{transform:translate(360px,-360px); visibility:hidden; transition:transform 3s; font-size:18px;}
+.box:hover dl p{visibility:visible; transform:translate(360px,-400px);}
+
+</style>
+</head>
+
+<body>
+<div class="box">
+<img src="img/pic4.jpg"/>
+<dl>
+	<dt>利用旋转显示额外的信息</dt>
+    <dd></dd>
+    <p>into into<p>
+</dl>
+</div>
+</body>
+</html>

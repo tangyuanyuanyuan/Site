@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	var a = prompt("请输入您的汇款金额");
+	var aa = parseInt(a);
+	if (aa>5000) {
+		alert("汇费为50元");
+		
+	} else if(aa>=100&&aa<=5000){
+		alert("汇费为" + (aa/100) + "元");
+	} else if(aa<100){
+		alert("汇费为1元");
+	}
+	
+</script>

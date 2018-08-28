@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	//转换为string
+	//方法一
+	var a=123;
+	
+	a=a.toString();
+	//null和undefined没有toString方法
+	console.log(typeof a);
+	console.log(a);
+	//方法二
+	//调用String函数
+	var a=123;
+	//String函数直接将null转换为"null" undefined钻换为"undefined"
+	a=String(a);
+	console.log(typeof a);
+	console.log(a);
+	
+	var b=111;
+	console.log(isNaN(b));
+	
+	var c= 0b10;
+	console.log(c);
+</script>

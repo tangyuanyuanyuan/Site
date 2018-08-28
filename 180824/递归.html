@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{width:100px; height: 100px; border: 1px solid red; float: left; margin-right: 5px;;}
+			button{display: block;color: red; transform: translate(-500px,300px);}
+		</style>
+	</head>
+	<body>
+		<div id="aa"></div>
+		<div id="bb"></div>
+		<div id="aaa"></div>
+		<div id="bbb"></div>
+		<div id="aaaa"></div>
+		<div id="bbbb"></div>
+		<div id="aaaaa"></div>
+		<div id="bbbbb"></div>
+		<button id="cc">奇数div为红色</button>
+		<button id="dd">偶数div为绿色</button>
+	</body>
+</html>
+<script>
+	var n=parseInt(prompt("请输入"))
+	if(n%2===0){
+		cc.onclick=function(){
+		aa.style.background="red";
+		aaa.style.background="red";
+		aaaa.style.background="red";
+		aaaaa.style.background="red";
+		
+	}
+	
+	}dd.onclick=function(){
+		bb.style.background="green";
+		bbb.style.background="green";
+		bbbb.style.background="green";
+		bbbbb.style.background="green";
+	
+	}
+</script>

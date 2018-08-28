@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+       //在一个数组中随机求取一定长度的数组
+        // 例如0-100，随机求取10个不重复数
+        var arr=[];
+        for(var i=0;i<100;i++){
+            arr.push(i);
+        }
+
+
+        function getRandom(min,max){
+            return Math.floor(Math.random()*(max-min)+min);
+        }
+
+        var num=getRandom(arr[0],arr[99]);
+       console.log(num);
+    </script>
+</body>
+</html>

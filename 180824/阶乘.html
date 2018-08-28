@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	
+	function jc(m){
+		if (m===1) {
+			return 1;
+		}
+		return m*jc(m-1);
+	}	
+	var result=jc(5);
+	alert(result);
+</script>

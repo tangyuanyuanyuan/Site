@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var arr3=[1,1,2,3,4,4,2,3,1,5,3,6,9,8,3,5,1];
+        var arr4=[];
+        for(a=0;a<arr3.length;a++){
+            var bool=false;
+            for(i=0;i<arr4.length;i++){
+                if(arr3[a]===arr4[i]){
+                    bool=true;
+                    break;
+                }
+            }
+            if(!bool){
+                arr4.push(arr3[a]);
+            }
+        }
+        arr3=arr4.concat();
+        console.log(arr3);
+        arr4=null;
+
+
+    </script>
+</body>
+</html>

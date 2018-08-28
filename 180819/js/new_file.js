@@ -1,0 +1,1 @@
+var c=78.99;  var type_end3=typeof(c);    console.log(type_end3);

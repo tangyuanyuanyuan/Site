@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var arr=[1,3,5,7,9,3,2,4,6,3,12];
+        var arr1=[];
+        var n=-1;
+        for(var i=0;i<arr.length;i=n){
+            var n=arr.indexOf(3,n+1);
+            if(n===-1){
+                break;
+            }
+             arr1.push(n);
+
+        }
+        console.log(arr1);
+        console.log(Math.PI);
+    </script>
+</body>
+</html>

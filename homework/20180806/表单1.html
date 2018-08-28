@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+
+.box {width:400px; height:500px; margin:20px auto; }
+	.tit {text-align:right;}
+	.box fieldset {border-left:none; border-right:none; border-bottom:none; border-color:#0F6; } 
+	.tijiao{margin-left:200px;}
+
+</style>
+</head>
+
+<body>
+<div class="box">
+    <div  class="tit"> *号所在项为必填项</div>
+    <form name="we" method="post" action="">
+        <fieldset>
+            <legend>个人信息</legend>
+            <p>姓名*<input type="text"/></p>
+            <p>地址*<input type="text"/></p>
+            <p>出生*<select>
+                    <option>1</option>
+            
+            </select>
+            <select>
+                    <option>Jan</option>
+            
+            </select>
+             <select>
+                    <option>1979</option>
+            
+            </select></p>
+            <p>性别*<select>
+                        <option>女</option>
+            </select></p>
+        </fieldset>
+        <fieldset>
+            <legend>其他信息</legend>
+            <fieldset>
+                <legend>你喜欢这个表单吗？*</legend>
+                <input name="like" type="radio">喜欢<input name="like" type="radio">不喜欢
+            </fieldset>
+            <fieldset>
+                <legend>你喜欢什么运动？*</legend>
+                <input name="zq" type="radio">足球<input name="lq" type="radio">篮球<input name="lq" type="radio">篮球
+            </fieldset>
+            <fieldset>
+                <legend>请写下你的建议？*</legend>
+                <textarea rows="10" cols="40"></textarea>
+                <p class="tijiao"><input type="submit" value="提交个人信息"></p>
+        	</fieldset>
+        
+        </fieldset>
+    
+    
+    </form>
+</div>
+</body>
+</html>

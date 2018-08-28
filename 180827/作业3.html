@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var arr=[];
+        for(var i=0;i<100;i++){
+            if(i%2===0){
+                arr.push(i);
+            }
+        }
+        arr.length=10;
+        for(var a=0;a<arr.length;a++){
+
+            if(arr[a]%5===0){
+                arr.splice(a,1);
+            }
+        }
+
+        for(var x=0;x<20;x++){
+            if(x%2===1){
+                arr.unshift(x);
+            }
+        }
+        for(var b=0;b<arr.length;b++){
+            if(arr[b]%3===0){
+                arr.splice(b,1);
+            }
+        }
+        var z=arr.length;
+        var arr2=[];
+        for(var y=0;y<z;y++){
+           arr2.push(arr.pop(y));
+        }
+        console.log(arr2);
+    </script>
+</body>
+</html>

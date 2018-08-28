@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr1=[];
+    var arr2=[];
+    for(var a=0;a<100;a++){
+        arr1.push(a);
+    }
+    for(var i=0;i<arr1.length;i++){
+        if(arr1[i]%2!==0&&arr1[i]%3!==0&&arr1[i]%5!==0){
+            arr2.push(arr1[i]);
+        }
+    }
+    arr1=null;
+    arr1=arr2.concat();
+    arr2=null;
+    console.log(arr1);
+
+</script>
+</body>
+</html>
