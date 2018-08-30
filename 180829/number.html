@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+//        转换进制
+        var n=100;
+        console.log(n.toString(2));
+//        保留小数点
+        var x=10.29929109192;
+        console.log(x.toFixed(2));
+//        NaN
+        if(x===NaN){
+            console.log("s")
+        }
+        console.log("w")
+        console.log(isNaN(n));
+
+//        转换指数
+        console.log(n.toExponential(2));
+
+        console.log(x.toPrecision(5));
+        var c=-0.233;
+        console.log(c.toPrecision(2));
+    </script>
+</body>
+</html>

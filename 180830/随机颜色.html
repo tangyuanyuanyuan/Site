@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1"></div>
+    <script>
+        var arr="rgba("+prompt("请输入透明值");
+        for(var a=0;a<3;a++){
+
+            arr+=String(Math.floor(Math.random()*255))+",";
+
+        }
+
+        arr=arr.slice(0,-1);
+        arr+=")";
+        document.write(arr );
+        div1.style.width="100px";
+        div1.style.height="100px";
+        div1.style.background=arr;
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var obj={name:"小红",sex:"男",age:18}
+        function fu(){
+            var str="";
+            for(var proto in obj){
+                str+=proto+"="+obj[proto]+"8";
+            }str=str.slice(0,-1)
+            return str;
+        }console.log(fu());
+    </script>
+</body>
+</html>
