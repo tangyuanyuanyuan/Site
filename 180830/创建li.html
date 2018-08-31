@@ -8,13 +8,14 @@
     <script>
         var ul=document.createElement("ul");
         document.body.appendChild(ul);
-        for (var a=0;a<100;a++){
+//        var elem=document.createDocumentFragment();
+        for(var i=0;i<10;i++){
             var li=document.createElement("li");
             ul.appendChild(li);
-            li.textContent=a;
+            li.textContent=i;
             li.style.listStyle="none";
         }
-
+        ul.appendChild(li);
     </script>
 </body>
 </html>

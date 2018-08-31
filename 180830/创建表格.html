@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var shopArr=[
+            {id:1001,icon:"img/1.png",name:"餐饮0",num:1,price:10},
+            {id:1002,icon:"img/2.png",name:"餐饮1",num:1,price:20},
+            {id:1003,icon:"img/3.png",name:"餐饮2",num:1,price:30},
+            {id:1004,icon:"img/4.png",name:"餐饮3",num:1,price:40},
+            {id:1005,icon:"img/5.png",name:"餐饮4",num:1,price:40},
+            {id:1006,icon:"img/6.png",name:"餐饮5",num:1,price:60},
+            {id:1007,icon:"img/7.png",name:"餐饮6",num:1,price:70},
+            {id:1008,icon:"img/8.png",name:"餐饮7",num:1,price:90},
+            {id:1009,icon:"img/9.png",name:"餐饮8",num:1,price:90},
+            {id:1010,icon:"img/10.png",name:"餐饮9",num:1,price:100}
+        ];
+        var table=document.createElement("table");
+        document.body.appendChild(table);
+        for(a=0;a<11;a++){
+             var tr=document.createElement("tr");
+             table.appendChild(tr);
+
+            for(i=0;i<5;i++){
+                 var td=document.createElement("td");
+                 tr.appendChild(td);
+                td.style.borderWidth="1px";
+                td.style.borderColor="red";
+                td.style.borderStyle="solid";
+            }
+        }
+        table.style.width="500px";
+        table.style.height="800px";
+        table.style.borderWidth="1px";
+        table.style.borderColor="red";
+        table.style.borderStyle="solid";
+        table.style.borderCollapse="collapse";
+        table.style.textAlign="center";
+        table.firstElementChild.firstElementChild.textContent="id";
+        table.children[0].children[1].textContent="icon";
+        table.children[0].children[2].textContent="name";
+        table.children[0].children[3].textContent="num";
+        table.children[0].children[4].textContent="price";
+        for(c=1;c<=10;c++){
+            table.children[c].children[0].textContent=1000+c;
+            table.children[c].children[1].textContent="img/"+c+".png";
+            table.children[c].children[2].textContent="餐饮"+(c-1);
+            table.children[c].children[3].textContent=1;
+            table.children[c].children[4].textContent=c*10;
+        }
+
+
+    </script>
+</body>
+</html>
