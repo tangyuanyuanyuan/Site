@@ -6,10 +6,33 @@
 </head>
 <body>
     <script>
-        var arr="helloworld";
-        var str=arr.split("");
-        arr = str.reverse().join("");
-        console.log(arr);
+//         普通写法
+//        var arr="helloworld";
+//        var str=arr.split("");
+//        arr = str.reverse().join("");
+//        console.log(arr);
+
+//函数一
+//        var arr="helloworld";
+//        var fan=function (){
+//            var str=arr.split("");
+//            arr=str.reverse().join("");
+//            return arr;
+//        }
+//
+//        var result=fan(arr);
+//        console.log(result);
+//
+//        函数二
+        var fan=function (arr){
+            var str=arr.split("");
+            arr=str.reverse().join("");
+            return arr;
+        }
+
+        var result=fan("helloworld");
+        console.log(result);
+//        成了成了
     </script>
 </body>
 </html>

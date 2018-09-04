@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #box{width: 500px; height:350px; margin: 0 auto; background: chartreuse; position: relative;}
+        #box img{width:500px;height: 300px;}
+        #left{background: chartreuse;}
+        #right{position: absolute; right: 0; background: chartreuse;}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p id="info"></p>
+        <img src="img/1.jpg" >
+        <button id="left">左</button>
+        <button id="right">右</button>
+    </div>
+    <script>
+        var left=document.getElementById("left");
+        var right=document.getElementById("right");
+        var img=document.getElementsByTagName("img")[0];
+        var imgarr=["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg"];
+        var index=0;
+        var info=document.getElementById("info");
+        info.innerHTML="一共"+imgarr.length+"张"   +   "当前第"+(index+1)+"张";
+        info.style.textAlign="center";
+        left.onclick=function () {
+
+//            alert("left")
+            index--;
+            if (index<0){
+                index=imgarr.length-1;
+            }
+            img.src=imgarr[index];
+            info.innerHTML="一共"+imgarr.length+"张"+"当前第"+(index+1)+"张";
+        };
+        right.onclick=function () {
+//            alert("right");
+//            img.src="img/2.jpg";
+            index++;
+            if (index>imgarr.length-1){
+                index=0;
+            }
+            img.src=imgarr[index];
+            info.innerHTML="一共"+imgarr.length+"张"+"当前第"+(index+1)+"张";
+
+        };
+
+            
+
+    </script>
+</body>
+</html>
