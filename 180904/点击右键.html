@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0; padding: 0;}
+        ul{position: absolute; display: none; z-index: 10;}
+        li{padding: 5px; font-size: 20px; background: chartreuse; list-style: none; cursor: default }
+        li:hover{background: crimson;}
+
+    </style>
+</head>
+<body>
+        <ul class="box0">
+            <li>新建</li>
+            <li>复制</li>
+            <li>剪切</li>
+            <li>粘贴</li>
+            <li>删除</li>
+
+        </ul>
+
+    <script>
+        var box0=document.querySelector(".box0");
+        document.addEventListener("contextmenu",mouseHandler);
+        box0.addEventListener("mouseleave",moustHandler);
+        box0.addEventListener("click",clickHandler);
+
+        function mouseHandler(e) {
+            e.preventDefault();
+            box0.style.display="block";
+            box0.style.top=e.y-15+"px";
+            box0.style.left=e.x-15+"px";
+//            document.removeEventListener("contextmenu",mouseHandler);
+
+        }
+        function moustHandler(e) {
+            box0.style.display="none";
+        }
+
+        function clickHandler(e) {
+            e.preventDefault();
+            console.log(e.target.textContent);
+            switch( e.target.textContent ){
+                case "新建":
+                var div=document.createElement("div");
+                document.body.appendChild(div);
+                div.style.width="50px";
+                div.style.height="50px";
+                    var arr="rgba(";
+                    for(var a=0;a<3;a++){
+                        arr+=String(Math.floor(Math.random()*255))+",";
+                    }
+                    arr=arr.slice(0,-1);
+                    arr+=")";
+                div.style.background=arr;
+                div.style.position="absolute";
+                div.style.top=e.y-25 + "px";
+                div.style.left=e.x-25 + "px";
+                div.style.transform = "translate(-50%,-50%)";
+                div.addEventListener("mousedown",dragHandler);
+                div.addEventListener("mouseup",dragHandler);
+                div.addEventListener("mousemove",dragHandler);
+
+                    break;
+                case "复制":
+
+                    var div=document.createElement("div");
+                    document.body.appendChild(div);
+                    div=div.cloneNode(false);
+
+                    break;
+                case "剪切":
+                    var div1=div.cloneNode(false);
+                    div.style.display=null;
+                    break;
+                case "粘贴":
+                    document.body.appendChild("div1");
+                    div1.style.left=e.x-25+"px";
+                    div1.style.top=e.y-25+"px";
+                    div1.addEventListener("dblclick",selectHandler);
+                    break;
+                case "删除":
+                    box0.removeEventListener("click",clickHandler);
+                    break;
+            }
+        }
+
+        function dragHandler(e) {
+            if (e.type==="mousedown"){
+                document.addEventListener("mousemove",dragHandler);
+                document.offsetPoint={x:e.offsetX,y:e.offsetY};
+                document.dragTarget=this;
+                this.addEventListener("mouseup",dragHandler);
+            }else if (e.type==="mousemove"){
+                this.dragTarget.style.left=e.pageX-this.offsetPoint.x+"px";
+                this.dragTarget.style.top=e.pageY-this.offsetPoint.y+"px";
+            }else if (e.type==="mouseup"){
+                document.removeEventListener("mousemove",dragHandler);
+                this.removeEventListener("mouseup",dragHandler);
+            }
+
+        }
+    </script>
+</body>
+</html>

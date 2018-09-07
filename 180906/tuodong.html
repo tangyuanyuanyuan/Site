@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        div{width: 100px; height: 100px; background: blueviolet; position: absolute}
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div=document.querySelector("div");
+        div.addEventListener("mousedown",dragHandler);
+        function dragHandler(e) {
+            if (e.type==="mousedown"){
+                document.addEventListener("mousemove",dragHandler);
+                document.offsetPoint={x:e.offsetX,y:e.offsetY};
+                document.dragTarget=this;
+                this.addEventListener("mouseup",dragHandler);
+            }else if (e.type==="mousemove"){
+                this.dragTarget.style.left=e.pageX-this.offsetPoint.x+"px";
+                this.dragTarget.style.top=e.pageY-this.offsetPoint.y+"px";
+            }else if (e.type==="mouseup"){
+                document.removeEventListener("mousemove",dragHandler);
+                this.removeEventListener("mouseup",dragHandler);
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0; padding: 0;}
+        img{display: block}
+        body img:nth-child(2){transform: translate(0,-350px) }
+        body img:nth-child(3){transform: translate(1890px,-410px) }
+
+    </style>
+</head>
+<body>
+    <img class="imgs" src="img/a.jpeg"/>
+    <img class="img1" src="img/left.png"/>
+    <img class="img2" src="img/right.png"/>
+    <script>
+        var img1=document.querySelector(".img1");
+        var img2=document.querySelector(".img2");
+        img1.addEventListener("click",clickHandler);
+        img2.addEventListener("click",clickHandlers);
+        var imgs=document.querySelector(".imgs");
+        var imgarr=["img/a.jpeg","img/b.jpeg","img/c.jpeg","img/d.jpeg","img/e.jpeg"];
+        var index=0;
+        function clickHandler(e) {
+//            alert("left");
+            index--;
+            if (index<0){
+                index=imgarr.length-1;
+            }
+            imgs.src=imgarr[index];
+        }
+        function clickHandlers(e) {
+//            alert("right");
+            index++;
+            if (index>imgarr.length-1){
+                index=0;
+            }
+            imgs.src=imgarr[index];
+        }
+    </script>
+</body>
+</html>

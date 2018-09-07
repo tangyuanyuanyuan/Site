@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var str="<div>你好\n欢迎来到这里\n可以正式</div>";
+        var reg=/div/g;
+        str=str.replace(reg,"span").replace(/\n/g,"<br/>");
+        console.log(str);
+    </script>
+</body>
+</html>

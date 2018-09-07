@@ -3,8 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        *{margin:0; padding: 0;}
+        #div0{width: 200px; height: 200px; background: royalblue;}
+        .box0{width: 200px; height: 200px; background: orchid;}
+    </style>
 </head>
 <body>
+    <div id="div0"></div>
+    <div class="box0"></div>
+    <script>
+        var div0=document.getElementById("div0");
+        div0.addEventListener("contextmenu",mouseHandler);
+        div0.addEventListener("click",mouseHandler);
+        div0.addEventListener("dblclick",dblHandler);
+        var box0=document.querySelector(".box0");
+        box0.addEventListener("mousemove",moveHandler);
 
+        function mouseHandler(e) {
+            e.preventDefault();
+//            console.log(e);
+        }
+
+        var arr="rgba(";
+        for(var a=0;a<3;a++){
+
+            arr+=String(Math.floor(Math.random()*255))+",";
+
+        }
+
+        arr=arr.slice(0,-1);
+        arr+=")";
+        function dblHandler(e) {
+            div0.style.backgroundColor=arr;
+            div0.removeEventListener("dblclick",dblHandler);
+
+        }
+        function moveHandler(e) {
+            box0.style.backgroundColor=arr;
+            box0.removeEventListener("mousemove",moveHandler);
+        }
+    </script>
 </body>
 </html>
